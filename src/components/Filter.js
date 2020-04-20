@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+
 export default class Products extends Component {
-
     render() {
-
-
         return (
             <div className="row">
                 <div className="col-md-4">
@@ -20,7 +18,7 @@ export default class Products extends Component {
                 </div>
                 <div className="col-md-4">
                     <label > Filter Size
-               <select className="form-control" value={this.props.size} onChange={this.props.handleSizeChange}>
+                        <select className="form-control" value={this.props.size} onChange={this.props.handleSizeChange}>
                             <option value="">ALL</option>
                             <option value="x">XS</option>
                             <option value="s">S</option>

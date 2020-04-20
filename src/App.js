@@ -8,6 +8,7 @@ import "./App.css";
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
       size: "",
       sort: "",
@@ -16,6 +17,7 @@ class App extends Component {
       filteredProducts: []
     };
   }
+
   componentWillMount() {
     if (localStorage.getItem("cartItems")) {
       this.setState({
@@ -59,7 +61,9 @@ class App extends Component {
       if (!productAlreadyInCart) {
         cartItems.push({ ...product, count: 1 });
       }
+
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
       return { cartItems: cartItems };
     });
   };
@@ -94,7 +98,7 @@ class App extends Component {
     this.setState({ sort: e.target.value });
     this.listProducts();
   };
-  
+
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
     this.listProducts();
